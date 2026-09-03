@@ -1,10 +1,7 @@
-name: Temporary Cloudflare deploy
+name: Deploy True Surf to VIIVERSION Cloudflare
 
 on:
   workflow_dispatch:
-  pull_request:
-    branches:
-      - main
   push:
     branches:
       - main
@@ -16,9 +13,11 @@ permissions:
 
 jobs:
   deploy:
-    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
     steps:
       - name: Checkout repository
@@ -30,43 +29,18 @@ jobs:
           node-version: 22
           cache: npm
 
+      - name: Verify Cloudflare credentials
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$CLOUDFLARE_API_TOKEN" || (echo "Missing CLOUDFLARE_API_TOKEN repository secret" && exit 1)
+          test -n "$CLOUDFLARE_ACCOUNT_ID" || (echo "Missing CLOUDFLARE_ACCOUNT_ID repository secret" && exit 1)
+
       - name: Install dependencies
         run: npm ci
 
       - name: Build Cloudflare Worker
         run: npx opennextjs-cloudflare build
 
-      - name: Deploy to a temporary Cloudflare account
-        shell: bash
-        run: |
-          set -euo pipefail
-          deploy_log="$RUNNER_TEMP/cloudflare-deploy.log"
-          npx wrangler deploy --temporary >"$deploy_log" 2>&1
-
-          claim_url="$(grep -Eo 'https://dash\.cloudflare\.com/claim-preview\?claimToken=[^[:space:]]+' "$deploy_log" | head -n 1 || true)"
-          if [[ -z "$claim_url" ]]; then
-            sed -E 's#claimToken=[^[:space:]]+#claimToken=[REDACTED]#g' "$deploy_log"
-            echo "Cloudflare did not return a claim URL." >&2
-            exit 1
-          fi
-
-          printf '%s' "$claim_url" >"$RUNNER_TEMP/claim-url.txt"
-          openssl pkeyutl -encrypt \
-            -pubin \
-            -inkey .github/temporary-deploy-public.pem \
-            -in "$RUNNER_TEMP/claim-url.txt" \
-            -out claim-url.enc \
-            -pkeyopt rsa_padding_mode:oaep \
-            -pkeyopt rsa_oaep_md:sha256
-
-          preview_url="$(grep -Eo 'https://[^[:space:]]+\.workers\.dev' "$deploy_log" | head -n 1 || true)"
-          echo "Temporary Cloudflare deployment created."
-          echo "Preview: ${preview_url:-see Cloudflare after claiming}"
-
-      - name: Upload encrypted claim link
-        uses: actions/upload-artifact@v4
-        with:
-          name: cloudflare-claim-link
-          path: claim-url.enc
-          retention-days: 1
-          if-no-files-found: error
+      - name: Deploy True Surf to VIIVERSION
+        run: npx wrangler deploy
