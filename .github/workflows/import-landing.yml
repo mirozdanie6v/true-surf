@@ -21,20 +21,14 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          expected=(
-            906845908704e612bab37445a17f8702ba7e1b368439266b7b001dffdbc33d5d
-            df0230a28bc6e2486a79bf7f336de581fe813e8ddde67e598308c0ce2240aacb
-            40103e0b0ada60533bfb3ec9fbba39e8865df50e214cebfc49fc242521f316a1
-            b8fbd805d23ab5960844eba38188003ac2620da0507a2e50d1344e6336ed95db
-            58a914edb6a3640ffb64d9fe656aac3964ceedabfac62156e15acc8b3c77d81f
-            dd8136e87b7306414d7660eafb287b9188fc5ba6cf46f306e25bd81f0cc44fcf
-          )
-          for n in 1 2 3 4 5 6; do
-            actual="$(sha256sum "public/landing-parts/$n.txt" | awk '{print $1}')"
-            echo "part $n: $actual"
-            test "$actual" = "${expected[$((n-1))]}"
-          done
-          cat public/landing-parts/{1,2,3,4,5,6}.txt | base64 -d > /tmp/index.html
+          test "$(sha256sum public/landing-parts/1.txt | awk '{print $1}')" = "906845908704e612bab37445a17f8702ba7e1b368439266b7b001dffdbc33d5d"
+          test "$(sha256sum public/landing-parts/2.txt | awk '{print $1}')" = "df0230a28bc6e2486a79bf7f336de581fe813e8ddde67e598308c0ce2240aacb"
+          test "$(sha256sum public/landing-parts/3.txt | awk '{print $1}')" = "40103e0b0ada60533bfb3ec9fbba39e8865df50e214cebfc49fc242521f316a1"
+          test "$(sha256sum public/landing-parts/4.txt | awk '{print $1}')" = "b8fbd805d23ab5960844eba38188003ac2620da0507a2e50d1344e6336ed95db"
+          test "$(sha256sum public/landing-parts/5.txt | awk '{print $1}')" = "58a914edb6a3640ffb64d9fe656aac3964ceedabfac62156e15acc8b3c77d81f"
+          test "$(sha256sum public/landing-parts/6a.txt | awk '{print $1}')" = "283ce524059732e43366d6b1c2cd3f34354befe5fa6d169d1da64e21e8ff9190"
+          test "$(sha256sum public/landing-parts/6b.txt | awk '{print $1}')" = "2a1424eb27b5027f36f59ea879e9d45391a24f3afbf5e9c5fa9f8ef4ec7a8229"
+          cat public/landing-parts/{1,2,3,4,5}.txt public/landing-parts/6a.txt public/landing-parts/6b.txt | base64 -d > /tmp/index.html
           actual_html="$(sha256sum /tmp/index.html | awk '{print $1}')"
           echo "index.html: $actual_html"
           test "$actual_html" = "e055f70c5f16f57ff6aa18c182d2e5d2fef5f169bbeaadd5457e9dbfd2939843"
