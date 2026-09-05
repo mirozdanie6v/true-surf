@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Tropical surf scene at Bai Dai">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1FB7B2"/>
+      <stop offset="0.48" stop-color="#6DD9D2"/>
+      <stop offset="1" stop-color="#FFF7E8"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F5D63"/>
+      <stop offset="0.5" stop-color="#179CA0"/>
+      <stop offset="1" stop-color="#23CFC7"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E9FFF9"/>
+      <stop offset="1" stop-color="#A8F0E9"/>
+    </linearGradient>
+    <linearGradient id="sand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFE7AA"/>
+      <stop offset="1" stop-color="#F4D48A"/>
+    </linearGradient>
+    <linearGradient id="board" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFE6A3"/>
+      <stop offset="1" stop-color="#D88B55"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#FFFBEA"/>
+      <stop offset="0.5" stop-color="#FFE6A3"/>
+      <stop offset="1" stop-color="#F4D48A" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="14" flood-color="#062F36" flood-opacity="0.24"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="1270" cy="170" r="210" fill="url(#sun)" filter="url(#soft)"/>
+  <circle cx="1270" cy="170" r="72" fill="#FFE6A3" opacity="0.92"/>
+
+  <path d="M0 420 C220 390 390 405 575 425 C770 447 930 420 1105 397 C1300 370 1450 390 1600 410 L1600 900 L0 900 Z" fill="url(#sea)"/>
+  <path d="M0 550 C180 520 345 544 520 566 C710 590 900 560 1075 525 C1260 487 1430 520 1600 548" fill="none" stroke="#DFFFF9" stroke-width="22" stroke-linecap="round" opacity="0.8"/>
+  <path d="M0 610 C195 585 330 600 500 625 C700 654 910 634 1085 602 C1270 568 1420 595 1600 618" fill="none" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" opacity="0.72"/>
+
+  <path d="M0 720 C260 655 470 692 650 735 C842 782 1030 790 1218 735 C1365 692 1482 675 1600 695 L1600 900 L0 900 Z" fill="url(#sand)"/>
+  <path d="M0 730 C240 665 458 702 650 742" fill="none" stroke="#FFF7E8" stroke-width="24" stroke-linecap="round" opacity="0.84"/>
+
+  <path d="M1030 426 C1110 348 1190 310 1290 315 C1360 319 1432 350 1502 416 C1420 398 1360 412 1307 448 C1227 501 1138 510 1030 426 Z" fill="#0B3740" opacity="0.42"/>
+  <path d="M1190 356 C1235 305 1272 280 1310 276 C1360 270 1398 300 1428 344 C1372 322 1330 327 1292 350 C1260 370 1226 372 1190 356 Z" fill="#0B3740" opacity="0.22"/>
+
+  <g opacity="0.94">
+    <path d="M1382 420 C1435 360 1480 318 1528 286" fill="none" stroke="#8F633D" stroke-width="22" stroke-linecap="round"/>
+    <path d="M1514 300 C1464 279 1424 268 1387 268" fill="none" stroke="#0B3740" stroke-width="17" stroke-linecap="round"/>
+    <path d="M1518 300 C1475 318 1434 338 1402 365" fill="none" stroke="#0B3740" stroke-width="17" stroke-linecap="round"/>
+    <path d="M1520 298 C1532 250 1550 209 1580 172" fill="none" stroke="#0B3740" stroke-width="17" stroke-linecap="round"/>
+    <path d="M1521 302 C1560 278 1582 266 1600 261" fill="none" stroke="#0B3740" stroke-width="17" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(1090 470)" filter="url(#shadow)">
+    <path d="M0 76 C72 26 142 21 214 40 C272 55 324 89 370 140 C280 112 222 120 174 155 C106 205 51 188 0 76 Z" fill="url(#wave)"/>
+    <path d="M22 88 C103 52 188 55 274 88" fill="none" stroke="#FFFFFF" stroke-width="18" stroke-linecap="round" opacity="0.95"/>
+    <path d="M104 135 C165 91 236 91 307 122" fill="none" stroke="#23CFC7" stroke-width="24" stroke-linecap="round" opacity="0.75"/>
+    <g transform="translate(206 54) rotate(-12)">
+      <ellipse cx="0" cy="15" rx="84" ry="11" fill="#FFE6A3" opacity="0.96"/>
+      <circle cx="0" cy="-20" r="16" fill="#8F633D"/>
+      <path d="M-4 -5 C4 22 0 44 -18 68" fill="none" stroke="#0B3740" stroke-width="13" stroke-linecap="round"/>
+      <path d="M5 13 C27 29 42 42 56 60" fill="none" stroke="#0B3740" stroke-width="11" stroke-linecap="round"/>
+      <path d="M-4 14 C-29 24 -44 35 -55 50" fill="none" stroke="#0B3740" stroke-width="11" stroke-linecap="round"/>
+      <path d="M-12 66 C-40 79 -60 82 -78 75" fill="none" stroke="#0B3740" stroke-width="12" stroke-linecap="round"/>
+      <path d="M-14 67 C12 81 31 91 48 101" fill="none" stroke="#0B3740" stroke-width="12" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <g transform="translate(1315 628) rotate(5)" filter="url(#shadow)">
+    <rect x="0" y="0" width="58" height="220" rx="29" fill="url(#board)"/>
+    <path d="M29 18 V202" stroke="#FFF7E8" stroke-width="4" opacity="0.75"/>
+    <path d="M14 73 C24 64 34 64 44 73" fill="none" stroke="#0F5D63" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(1382 600) rotate(-5)" filter="url(#shadow)">
+    <rect x="0" y="0" width="58" height="238" rx="29" fill="#FFF7E8"/>
+    <path d="M29 18 V220" stroke="#1FB7B2" stroke-width="4" opacity="0.8"/>
+    <path d="M14 74 C24 65 34 65 44 74" fill="none" stroke="#0F5D63" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(1450 620) rotate(8)" filter="url(#shadow)">
+    <rect x="0" y="0" width="58" height="215" rx="29" fill="#23CFC7"/>
+    <path d="M29 18 V197" stroke="#FFF7E8" stroke-width="4" opacity="0.7"/>
+  </g>
+
+  <g opacity="0.17">
+    <path d="M1000 150 l70 70 -70 70 -70 -70 Z" fill="none" stroke="#FFF7E8" stroke-width="5"/>
+    <path d="M1115 150 l70 70 -70 70 -70 -70 Z" fill="none" stroke="#FFF7E8" stroke-width="5"/>
+    <path d="M1060 95 l70 70 -70 70 -70 -70 Z" fill="none" stroke="#FFF7E8" stroke-width="5"/>
+  </g>
+</svg>
