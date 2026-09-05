@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const PARTS = [1, 2, 3, 4, 5, 6];
+const PARTS = ["1", "2", "3", "4", "5", "6a", "6b"];
 
 function decodeBase64Utf8(value: string) {
   const binary = atob(value.replace(/\s+/g, ""));
