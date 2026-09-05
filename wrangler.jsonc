@@ -4,6 +4,12 @@
   "name": "true-surf",
   "compatibility_date": "2026-08-21",
   "compatibility_flags": ["nodejs_compat"],
+  "routes": [
+    {
+      "pattern": "truesurf.viiversion.com",
+      "custom_domain": true
+    }
+  ],
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
