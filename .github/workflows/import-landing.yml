@@ -1,4 +1,4 @@
-name: Validate TRUE SURF landing package
+name: Validate TRUE SURF landing payload
 
 on:
   push:
@@ -14,10 +14,15 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - name: Download supplied landing package
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Reconstruct and verify supplied landing
+        shell: bash
         run: |
           set -euo pipefail
-          curl -fL --retry 2 'https://firestorage.ai/ja/f/ks4cbNXJNx7k' -o /tmp/landing-package
-          file /tmp/landing-package
-          ls -lh /tmp/landing-package
-          unzip -t /tmp/landing-package
+          cat public/landing-parts/{1,2,3,4,5,6}.txt | tr -d '\r\n ' | base64 -d > /tmp/index.html
+          test "$(sha256sum /tmp/index.html | awk '{print $1}')" = "e055f70c5f16f57ff6aa18c182d2e5d2fef5f169bbeaadd5457e9dbfd2939843"
+          grep -q '<title>TRUE SURF' /tmp/index.html
+          grep -q 'id="leadForm"' /tmp/index.html
+          echo 'Landing payload matches uploaded index.html exactly.'
