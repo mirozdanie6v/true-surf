@@ -23,7 +23,7 @@ jobs:
       - name: Checkout TRUE SURF Mini App source
         uses: actions/checkout@v4
         with:
-          ref: 5a3cc0c6bd727c049c5edb7b99da766cc34e4d63
+          ref: main
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
