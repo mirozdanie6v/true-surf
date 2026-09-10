@@ -20,10 +20,10 @@ jobs:
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
     steps:
-      - name: Checkout TRUE SURF Mini App source
+      - name: Checkout exact TRUE SURF Mini App preview source
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: 616155bdb8ef94eae41810dc2387f73d2a269ca3
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
