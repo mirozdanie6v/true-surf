@@ -18,6 +18,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="ru">
       <body>
+        <Script src="https://telegram.org/js/telegram-web-app.js?63" strategy="beforeInteractive" />
         <Script src="https://dashboard.viiversion.com/tracker.js" strategy="afterInteractive" data-project="TRUE SURF" />
         {children}
       </body>
