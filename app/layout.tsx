@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata, Viewport } from "next";\nimport Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ru">
-      <body>{children}</body>
+      <body>\n        <Script src="https://telegram.org/js/telegram-web-app.js?63" strategy="beforeInteractive" />\n        <Script src="https://dashboard.viiversion.com/tracker.js" strategy="afterInteractive" data-project="TRUE SURF App" />\n        {children}\n      </body>
     </html>
   );
 }
