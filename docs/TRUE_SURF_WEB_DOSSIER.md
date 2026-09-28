@@ -100,6 +100,37 @@ Sources:
 https://ht.kz/new/hotel/vietnam/kamran/amiana-resort-cam-ranh
 Public TRUE SURF maps reviews.
 
+
+### Anastasia / Nastasya / Ness — confirmed personal profile
+
+Direct evidence supplied from Instagram profile:
+- handle: `@ness.muse`
+- display name: `Настасья | Ness`
+- profile category: personal blog
+- bio explicitly links `Surf School & Camp @true.surf.mafia`
+- bio also links `Fire Dance @fire.performance.nha`
+- bio lists hair colour stylist as another professional identity
+- visible Highlights include `Surf 25’`, `Viet’25`, `Dance`, `Vietnam’24`
+- the profile is visibly followed by `true.surf.mafia`
+
+This directly confirms that Nastasya/Ness is publicly affiliated with TRUE SURF, not merely mentioned by customers.
+
+Independent 2026 customer evidence additionally says Nastya handles shooting and helps choose the right time/conditions around lessons.
+
+What this supports for brand use:
+- instructor / TRUE SURF team member;
+- visible surfing identity;
+- photo/video/customer-experience role;
+- broader creative/lifestyle identity around fire performance and beauty work.
+
+What is still not verified:
+- surname;
+- exact years of surfing;
+- exact years teaching;
+- certifications;
+- formal role title inside TRUE SURF.
+
+
 ### 3. Maxim — current instructor reported by client/user, not yet independently identified online
 
 Targeted searches were run for:
