@@ -101,35 +101,19 @@ https://ht.kz/new/hotel/vietnam/kamran/amiana-resort-cam-ranh
 Public TRUE SURF maps reviews.
 
 
-### Anastasia / Nastasya / Ness — confirmed personal profile
+### Anastasia / Nastasya / Ness — profile identified, full Instagram review pending
 
-Direct evidence supplied from Instagram profile:
-- handle: `@ness.muse`
-- display name: `Настасья | Ness`
-- profile category: personal blog
-- bio explicitly links `Surf School & Camp @true.surf.mafia`
-- bio also links `Fire Dance @fire.performance.nha`
-- bio lists hair colour stylist as another professional identity
-- visible Highlights include `Surf 25’`, `Viet’25`, `Dance`, `Vietnam’24`
-- the profile is visibly followed by `true.surf.mafia`
+Confirmed account supplied by the client:
+- Instagram: `@ness.muse`
+- display name visible in profile: `Настасья | Ness`
+- the profile bio visibly references `@true.surf.mafia`
 
-This directly confirms that Nastasya/Ness is publicly affiliated with TRUE SURF, not merely mentioned by customers.
+Important evidence rule:
+The Instagram feed/posts/highlights have not yet been directly reviewed through an accessible Instagram browser session. Do not treat profile-header observations or independent reviews as a substitute for a full post-level Instagram audit.
 
-Independent 2026 customer evidence additionally says Nastya handles shooting and helps choose the right time/conditions around lessons.
-
-What this supports for brand use:
-- instructor / TRUE SURF team member;
-- visible surfing identity;
-- photo/video/customer-experience role;
-- broader creative/lifestyle identity around fire performance and beauty work.
-
-What is still not verified:
-- surname;
-- exact years of surfing;
-- exact years teaching;
-- certifications;
-- formal role title inside TRUE SURF.
-
+Independently supported public evidence:
+- 2026 customer review names Nastya alongside Anton and says she handles shooting and helps choose lesson timing/conditions.
+- she is therefore a confirmed TRUE SURF team member, but exact surfing/teaching tenure, certifications, surname and detailed biography still require direct profile/post verification.
 
 ### 3. Maxim — current instructor reported by client/user, not yet independently identified online
 
