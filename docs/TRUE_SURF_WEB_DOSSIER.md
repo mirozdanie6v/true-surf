@@ -205,30 +205,64 @@ https://www.tripadvisor.ru/Attraction_Review-g293928-d33988624-Reviews-True_Surf
 
 ## Pricing
 
-### Public official price verification
-No current official TRUE SURF price list was found in reliably indexed official sources during this research.
+### Source correction
 
-Therefore the production app must NOT treat current demo prices as confirmed merely because they exist in our prototype.
+The TRUE SURF pricing used in the VIIVERSION prototype did not come from invention or generic market research. It originated from TRUE SURF material supplied from the school's Telegram channel during product work in August 2026, including user-provided Telegram screenshots and subsequent price corrections.
 
-### Current VIIVERSION prototype values — require client confirmation
-These exist in the current TRUE SURF Mini App source, but are not independently verified as the school’s current official prices:
+Historical reconstruction:
+- 2026-08-17: Telegram screenshots were used as client-provided pricing evidence. The prototype at that point recorded:
+  - Group lesson — $50/person
+  - Pair lesson — $60/person
+  - Individual lesson — $70
+  - Just Try — $100
+  - Base Light — $150
+  - Base Pro — $230
+  - Skill Up — $240
+- 2026-08-19: lesson pricing was updated in the working prototype to:
+  - Personal 1:1 — $80
+  - Personal 2:1 — $70/person
+  - Personal 3:1 — $60/person
+- By the first full Next.js rebuild committed on 2026-08-21, the source already contained the expanded price catalogue below.
+
+Therefore, the earlier statement in this dossier that no official/current TRUE SURF price list had been found was methodologically incorrect: Telegram was the primary client source, but the public web index did not expose the channel price posts reliably.
+
+### Price catalogue currently encoded in TRUE SURF Mini App
+
+Lessons:
 - Group lesson — $50
 - Personal 1:1 — $80
 - Personal 2:1 — $70/person
 - Personal 3:1 — $60/person
+
+Packages:
 - Just Try — $100
 - Base Light — $150
 - Base Pro — $230
 - Skill Up — $240
 - 2gether 4ever — $400
-- Board rental: 1h 200k VND; 2h 300k; 3h 400k
-- Rent Base Light: 4×2h — 1,000k VND / $40
-- Rent Base Pro: 8×2h — 1,600k VND / $60
-- Rent Terminator: 12×2h — 2,400k VND / $90
-- Rent No Limits: 1 month — 3,900k VND / $150
-- prototype promos: birthday, group 4+, bring-a-friend.
 
-Status: client validation required before production.
+Board rental:
+- 1 hour — 200k VND
+- 2 hours — 300k VND
+- 3 hours — 400k VND
+
+Rental packages:
+- Rent Base Light — 4×2h — 1,000k VND / $40
+- Rent Base Pro — 8×2h — 1,600k VND / $60
+- Rent Terminator — 12×2h — 2,400k VND / $90
+- Rent No Limits — 1 month — 3,900k VND / $150
+
+Promos encoded in the product:
+- Birthday — -15% on lesson and -50% on rental from 1 day
+- Group of 4+ — -10%
+- Bring a friend — 2 hours of board rental free
+
+### Evidence status
+
+- The August 17 lesson/package prices above are directly traceable to TRUE SURF Telegram screenshots supplied during the project.
+- The August 19 lesson price correction to $80 / $70 / $60 is also documented in the project conversation history.
+- The expanded catalogue (2gether 4ever, rental packages and promos) is present in the earliest full Next.js rebuild on 2026-08-21.
+- The current research pass has not yet recovered the exact Telegram post/screenshot for every expanded rental/promo line, so those should be treated as project-preserved TRUE SURF pricing data pending post-level archival, not as invented values.
 
 ## Capacity / group size
 
